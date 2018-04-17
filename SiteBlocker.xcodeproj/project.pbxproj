@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA0FAEE7208668760000E72D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEE6208668760000E72D /* AppDelegate.swift */; };
+		EA0FAEE9208668760000E72D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEE8208668760000E72D /* ViewController.swift */; };
+		EA0FAEEC208668760000E72D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0FAEEA208668760000E72D /* Main.storyboard */; };
+		EA0FAEEF208668760000E72D /* SiteBlocker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEED208668760000E72D /* SiteBlocker.xcdatamodeld */; };
+		EA0FAEF1208668780000E72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0FAEF0208668780000E72D /* Assets.xcassets */; };
+		EA0FAEF4208668780000E72D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0FAEF2208668780000E72D /* LaunchScreen.storyboard */; };
+		EA0FAEFF208668780000E72D /* SiteBlockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEFE208668780000E72D /* SiteBlockerTests.swift */; };
+		EA0FAF0A208668780000E72D /* SiteBlockerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAF09208668780000E72D /* SiteBlockerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA0FAEFB208668780000E72D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA0FAEDB208668760000E72D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA0FAEE2208668760000E72D;
+			remoteInfo = SiteBlocker;
+		};
+		EA0FAF06208668780000E72D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA0FAEDB208668760000E72D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA0FAEE2208668760000E72D;
+			remoteInfo = SiteBlocker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA0FAEE3208668760000E72D /* SiteBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiteBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0FAEE6208668760000E72D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA0FAEE8208668760000E72D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA0FAEEB208668760000E72D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA0FAEEE208668760000E72D /* SiteBlocker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SiteBlocker.xcdatamodel; sourceTree = "<group>"; };
+		EA0FAEF0208668780000E72D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA0FAEF3208668780000E72D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA0FAEF5208668780000E72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA0FAEFA208668780000E72D /* SiteBlockerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiteBlockerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0FAEFE208668780000E72D /* SiteBlockerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteBlockerTests.swift; sourceTree = "<group>"; };
+		EA0FAF00208668780000E72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA0FAF05208668780000E72D /* SiteBlockerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiteBlockerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0FAF09208668780000E72D /* SiteBlockerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteBlockerUITests.swift; sourceTree = "<group>"; };
+		EA0FAF0B208668780000E72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA0FAEE0208668760000E72D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0FAEF7208668780000E72D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0FAF02208668780000E72D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA0FAEDA208668760000E72D = {
+			isa = PBXGroup;
+			children = (
+				EA0FAEE5208668760000E72D /* SiteBlocker */,
+				EA0FAEFD208668780000E72D /* SiteBlockerTests */,
+				EA0FAF08208668780000E72D /* SiteBlockerUITests */,
+				EA0FAEE4208668760000E72D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA0FAEE4208668760000E72D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA0FAEE3208668760000E72D /* SiteBlocker.app */,
+				EA0FAEFA208668780000E72D /* SiteBlockerTests.xctest */,
+				EA0FAF05208668780000E72D /* SiteBlockerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA0FAEE5208668760000E72D /* SiteBlocker */ = {
+			isa = PBXGroup;
+			children = (
+				EA0FAEE6208668760000E72D /* AppDelegate.swift */,
+				EA0FAEE8208668760000E72D /* ViewController.swift */,
+				EA0FAEEA208668760000E72D /* Main.storyboard */,
+				EA0FAEF0208668780000E72D /* Assets.xcassets */,
+				EA0FAEF2208668780000E72D /* LaunchScreen.storyboard */,
+				EA0FAEF5208668780000E72D /* Info.plist */,
+				EA0FAEED208668760000E72D /* SiteBlocker.xcdatamodeld */,
+			);
+			path = SiteBlocker;
+			sourceTree = "<group>";
+		};
+		EA0FAEFD208668780000E72D /* SiteBlockerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA0FAEFE208668780000E72D /* SiteBlockerTests.swift */,
+				EA0FAF00208668780000E72D /* Info.plist */,
+			);
+			path = SiteBlockerTests;
+			sourceTree = "<group>";
+		};
+		EA0FAF08208668780000E72D /* SiteBlockerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA0FAF09208668780000E72D /* SiteBlockerUITests.swift */,
+				EA0FAF0B208668780000E72D /* Info.plist */,
+			);
+			path = SiteBlockerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA0FAEE2208668760000E72D /* SiteBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0FAF0E208668780000E72D /* Build configuration list for PBXNativeTarget "SiteBlocker" */;
+			buildPhases = (
+				EA0FAEDF208668760000E72D /* Sources */,
+				EA0FAEE0208668760000E72D /* Frameworks */,
+				EA0FAEE1208668760000E72D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SiteBlocker;
+			productName = SiteBlocker;
+			productReference = EA0FAEE3208668760000E72D /* SiteBlocker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA0FAEF9208668780000E72D /* SiteBlockerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0FAF11208668780000E72D /* Build configuration list for PBXNativeTarget "SiteBlockerTests" */;
+			buildPhases = (
+				EA0FAEF6208668780000E72D /* Sources */,
+				EA0FAEF7208668780000E72D /* Frameworks */,
+				EA0FAEF8208668780000E72D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA0FAEFC208668780000E72D /* PBXTargetDependency */,
+			);
+			name = SiteBlockerTests;
+			productName = SiteBlockerTests;
+			productReference = EA0FAEFA208668780000E72D /* SiteBlockerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA0FAF04208668780000E72D /* SiteBlockerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0FAF14208668780000E72D /* Build configuration list for PBXNativeTarget "SiteBlockerUITests" */;
+			buildPhases = (
+				EA0FAF01208668780000E72D /* Sources */,
+				EA0FAF02208668780000E72D /* Frameworks */,
+				EA0FAF03208668780000E72D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA0FAF07208668780000E72D /* PBXTargetDependency */,
+			);
+			name = SiteBlockerUITests;
+			productName = SiteBlockerUITests;
+			productReference = EA0FAF05208668780000E72D /* SiteBlockerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA0FAEDB208668760000E72D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = cadams;
+				TargetAttributes = {
+					EA0FAEE2208668760000E72D = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					EA0FAEF9208668780000E72D = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = EA0FAEE2208668760000E72D;
+					};
+					EA0FAF04208668780000E72D = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = EA0FAEE2208668760000E72D;
+					};
+				};
+			};
+			buildConfigurationList = EA0FAEDE208668760000E72D /* Build configuration list for PBXProject "SiteBlocker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA0FAEDA208668760000E72D;
+			productRefGroup = EA0FAEE4208668760000E72D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA0FAEE2208668760000E72D /* SiteBlocker */,
+				EA0FAEF9208668780000E72D /* SiteBlockerTests */,
+				EA0FAF04208668780000E72D /* SiteBlockerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA0FAEE1208668760000E72D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0FAEF4208668780000E72D /* LaunchScreen.storyboard in Resources */,
+				EA0FAEF1208668780000E72D /* Assets.xcassets in Resources */,
+				EA0FAEEC208668760000E72D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0FAEF8208668780000E72D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0FAF03208668780000E72D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA0FAEDF208668760000E72D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0FAEE9208668760000E72D /* ViewController.swift in Sources */,
+				EA0FAEEF208668760000E72D /* SiteBlocker.xcdatamodeld in Sources */,
+				EA0FAEE7208668760000E72D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0FAEF6208668780000E72D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0FAEFF208668780000E72D /* SiteBlockerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0FAF01208668780000E72D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0FAF0A208668780000E72D /* SiteBlockerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA0FAEFC208668780000E72D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA0FAEE2208668760000E72D /* SiteBlocker */;
+			targetProxy = EA0FAEFB208668780000E72D /* PBXContainerItemProxy */;
+		};
+		EA0FAF07208668780000E72D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA0FAEE2208668760000E72D /* SiteBlocker */;
+			targetProxy = EA0FAF06208668780000E72D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA0FAEEA208668760000E72D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA0FAEEB208668760000E72D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA0FAEF2208668780000E72D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA0FAEF3208668780000E72D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA0FAF0C208668780000E72D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA0FAF0D208668780000E72D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA0FAF0F208668780000E72D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4NK4HMU2T;
+				INFOPLIST_FILE = SiteBlocker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cadams.SiteBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA0FAF10208668780000E72D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4NK4HMU2T;
+				INFOPLIST_FILE = SiteBlocker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cadams.SiteBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA0FAF12208668780000E72D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4NK4HMU2T;
+				INFOPLIST_FILE = SiteBlockerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cadams.SiteBlockerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SiteBlocker.app/SiteBlocker";
+			};
+			name = Debug;
+		};
+		EA0FAF13208668780000E72D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4NK4HMU2T;
+				INFOPLIST_FILE = SiteBlockerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cadams.SiteBlockerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SiteBlocker.app/SiteBlocker";
+			};
+			name = Release;
+		};
+		EA0FAF15208668780000E72D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4NK4HMU2T;
+				INFOPLIST_FILE = SiteBlockerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cadams.SiteBlockerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SiteBlocker;
+			};
+			name = Debug;
+		};
+		EA0FAF16208668780000E72D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4NK4HMU2T;
+				INFOPLIST_FILE = SiteBlockerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cadams.SiteBlockerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SiteBlocker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA0FAEDE208668760000E72D /* Build configuration list for PBXProject "SiteBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0FAF0C208668780000E72D /* Debug */,
+				EA0FAF0D208668780000E72D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA0FAF0E208668780000E72D /* Build configuration list for PBXNativeTarget "SiteBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0FAF0F208668780000E72D /* Debug */,
+				EA0FAF10208668780000E72D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA0FAF11208668780000E72D /* Build configuration list for PBXNativeTarget "SiteBlockerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0FAF12208668780000E72D /* Debug */,
+				EA0FAF13208668780000E72D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA0FAF14208668780000E72D /* Build configuration list for PBXNativeTarget "SiteBlockerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0FAF15208668780000E72D /* Debug */,
+				EA0FAF16208668780000E72D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA0FAEED208668760000E72D /* SiteBlocker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA0FAEEE208668760000E72D /* SiteBlocker.xcdatamodel */,
+			);
+			currentVersion = EA0FAEEE208668760000E72D /* SiteBlocker.xcdatamodel */;
+			path = SiteBlocker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EA0FAEDB208668760000E72D /* Project object */;
+}
