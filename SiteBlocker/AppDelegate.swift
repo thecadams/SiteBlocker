@@ -8,21 +8,30 @@
 
 import UIKit
 import CoreData
+import SafariServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if isFirstLaunch {
+            firstLaunchInit()
+        }
+        updateBlockerList()
+
+        let navigationController = self.window!.rootViewController! as! UINavigationController
+        let tableViewController = navigationController.topViewController! as! TableViewController
+        tableViewController.managedObjectContext = self.persistentContainer.viewContext
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        updateBlockerList()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -67,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  * The store could not be migrated to the current model version.
                  Check the error message to determine what the actual problem was.
                  */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                fatalError("Unresolved error initializing persistent store \(error), \(error.userInfo)")
             }
         })
         return container
@@ -89,5 +98,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    // MARK: - Updating the content blocker JSON
+
+    let jsonEntryTemplate = "{\"trigger\":{\"url-filter\":\"%@\"},\"action\":{\"type\":\"block\"}}"
+
+    func updateBlockerList() {
+        let fetchRequest: NSFetchRequest<Entry> = Entry.fetchRequest()
+        do {
+            let entries = try persistentContainer.viewContext.fetch(fetchRequest)
+            let json = "[\(entries.filter { $0.enabled }.map { String(format: jsonEntryTemplate, $0.url!) }.joined(separator: ","))]"
+            let jsonURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.cadams.SiteBlocker")?.appendingPathComponent("BlockerList.json")
+
+            try json.data(using: .utf8)?.write(to: jsonURL!, options: .atomic)
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+
+        SFContentBlockerManager.reloadContentBlocker(
+        withIdentifier: "cadams.SiteBlocker.Blocker") {
+            (e:Error?) in
+            NSLog("Completed with \(String(describing: e)) for cadams.SiteBlocker.Blocker")
+        }
+    }
+
+    // MARK: - First launch
+
+    let firstLaunchURLs = [
+        "^https?://(www.)?daringfireball.net/",
+        "^https?://(www.)?macrumors.com/",
+        "^https?://(www.)?reddit.com/",
+        "^https?://(www.)?wtfjht.com/",
+        "^https?://(www.)?whatthefuckjusthappenedtoday.com/"
+    ]
+
+    var isFirstLaunch: Bool = {
+        let userDefaults = UserDefaults.standard
+        let wasLaunchedBefore = userDefaults.bool(forKey: "SiteBlocker.WasLaunchedBefore")
+        if !wasLaunchedBefore {
+            userDefaults.set(true, forKey: "SiteBlocker.WasLaunchedBefore")
+        }
+        NSLog("isFirstLaunch: returning \(!wasLaunchedBefore)")
+        return !wasLaunchedBefore
+    }()
+
+    func firstLaunchInit() {
+        let context = persistentContainer.viewContext
+        let _ = firstLaunchURLs.map {
+            let entry = Entry(context: context)
+            entry.url = $0
+            entry.enabled = true
+        }
+        do {
+            try context.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error saving initial urls \(nserror), \(nserror.userInfo)")
+        }
+    }
 }
 

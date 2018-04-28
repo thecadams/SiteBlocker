@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		EA0FAEE7208668760000E72D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEE6208668760000E72D /* AppDelegate.swift */; };
-		EA0FAEE9208668760000E72D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEE8208668760000E72D /* ViewController.swift */; };
+		EA0FAEE9208668760000E72D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEE8208668760000E72D /* TableViewController.swift */; };
 		EA0FAEEC208668760000E72D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0FAEEA208668760000E72D /* Main.storyboard */; };
 		EA0FAEEF208668760000E72D /* SiteBlocker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEED208668760000E72D /* SiteBlocker.xcdatamodeld */; };
 		EA0FAEF1208668780000E72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0FAEF0208668780000E72D /* Assets.xcassets */; };
 		EA0FAEF4208668780000E72D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0FAEF2208668780000E72D /* LaunchScreen.storyboard */; };
 		EA0FAEFF208668780000E72D /* SiteBlockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEFE208668780000E72D /* SiteBlockerTests.swift */; };
 		EA0FAF0A208668780000E72D /* SiteBlockerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAF09208668780000E72D /* SiteBlockerUITests.swift */; };
+		EA0FAF1E2086793B0000E72D /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = EA0FAF1D2086793B0000E72D /* blockerList.json */; };
+		EA0FAF202086793B0000E72D /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAF1F2086793B0000E72D /* ContentBlockerRequestHandler.swift */; };
+		EA0FAF242086793B0000E72D /* Blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA0FAF1B2086793B0000E72D /* Blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EA7666FF208E7F17006DBB61 /* SiteBlocker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEED208668760000E72D /* SiteBlocker.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +36,33 @@
 			remoteGlobalIDString = EA0FAEE2208668760000E72D;
 			remoteInfo = SiteBlocker;
 		};
+		EA0FAF222086793B0000E72D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA0FAEDB208668760000E72D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA0FAF1A2086793B0000E72D;
+			remoteInfo = Blocker;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA0FAF282086793B0000E72D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EA0FAF242086793B0000E72D /* Blocker.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EA0FAEE3208668760000E72D /* SiteBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiteBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0FAEE6208668760000E72D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA0FAEE8208668760000E72D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA0FAEE8208668760000E72D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		EA0FAEEB208668760000E72D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA0FAEEE208668760000E72D /* SiteBlocker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SiteBlocker.xcdatamodel; sourceTree = "<group>"; };
 		EA0FAEF0208668780000E72D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +74,12 @@
 		EA0FAF05208668780000E72D /* SiteBlockerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiteBlockerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0FAF09208668780000E72D /* SiteBlockerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteBlockerUITests.swift; sourceTree = "<group>"; };
 		EA0FAF0B208668780000E72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA0FAF1B2086793B0000E72D /* Blocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Blocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0FAF1D2086793B0000E72D /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		EA0FAF1F2086793B0000E72D /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		EA0FAF212086793B0000E72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA7666FE208E720C006DBB61 /* SiteBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiteBlocker.entitlements; sourceTree = "<group>"; };
+		EA766700208E8399006DBB61 /* Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blocker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +104,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA0FAF182086793B0000E72D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +120,7 @@
 				EA0FAEE5208668760000E72D /* SiteBlocker */,
 				EA0FAEFD208668780000E72D /* SiteBlockerTests */,
 				EA0FAF08208668780000E72D /* SiteBlockerUITests */,
+				EA0FAF1C2086793B0000E72D /* Blocker */,
 				EA0FAEE4208668760000E72D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +131,7 @@
 				EA0FAEE3208668760000E72D /* SiteBlocker.app */,
 				EA0FAEFA208668780000E72D /* SiteBlockerTests.xctest */,
 				EA0FAF05208668780000E72D /* SiteBlockerUITests.xctest */,
+				EA0FAF1B2086793B0000E72D /* Blocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,8 +139,9 @@
 		EA0FAEE5208668760000E72D /* SiteBlocker */ = {
 			isa = PBXGroup;
 			children = (
+				EA7666FE208E720C006DBB61 /* SiteBlocker.entitlements */,
 				EA0FAEE6208668760000E72D /* AppDelegate.swift */,
-				EA0FAEE8208668760000E72D /* ViewController.swift */,
+				EA0FAEE8208668760000E72D /* TableViewController.swift */,
 				EA0FAEEA208668760000E72D /* Main.storyboard */,
 				EA0FAEF0208668780000E72D /* Assets.xcassets */,
 				EA0FAEF2208668780000E72D /* LaunchScreen.storyboard */,
@@ -128,6 +169,17 @@
 			path = SiteBlockerUITests;
 			sourceTree = "<group>";
 		};
+		EA0FAF1C2086793B0000E72D /* Blocker */ = {
+			isa = PBXGroup;
+			children = (
+				EA766700208E8399006DBB61 /* Blocker.entitlements */,
+				EA0FAF1D2086793B0000E72D /* blockerList.json */,
+				EA0FAF1F2086793B0000E72D /* ContentBlockerRequestHandler.swift */,
+				EA0FAF212086793B0000E72D /* Info.plist */,
+			);
+			path = Blocker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +190,12 @@
 				EA0FAEDF208668760000E72D /* Sources */,
 				EA0FAEE0208668760000E72D /* Frameworks */,
 				EA0FAEE1208668760000E72D /* Resources */,
+				EA0FAF282086793B0000E72D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EA0FAF232086793B0000E72D /* PBXTargetDependency */,
 			);
 			name = SiteBlocker;
 			productName = SiteBlocker;
@@ -184,6 +238,23 @@
 			productReference = EA0FAF05208668780000E72D /* SiteBlockerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		EA0FAF1A2086793B0000E72D /* Blocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0FAF252086793B0000E72D /* Build configuration list for PBXNativeTarget "Blocker" */;
+			buildPhases = (
+				EA0FAF172086793B0000E72D /* Sources */,
+				EA0FAF182086793B0000E72D /* Frameworks */,
+				EA0FAF192086793B0000E72D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Blocker;
+			productName = Blocker;
+			productReference = EA0FAF1B2086793B0000E72D /* Blocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,6 +267,11 @@
 				TargetAttributes = {
 					EA0FAEE2208668760000E72D = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					EA0FAEF9208668780000E72D = {
 						CreatedOnToolsVersion = 9.3;
@@ -204,6 +280,14 @@
 					EA0FAF04208668780000E72D = {
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = EA0FAEE2208668760000E72D;
+					};
+					EA0FAF1A2086793B0000E72D = {
+						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -223,6 +307,7 @@
 				EA0FAEE2208668760000E72D /* SiteBlocker */,
 				EA0FAEF9208668780000E72D /* SiteBlockerTests */,
 				EA0FAF04208668780000E72D /* SiteBlockerUITests */,
+				EA0FAF1A2086793B0000E72D /* Blocker */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +337,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA0FAF192086793B0000E72D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0FAF1E2086793B0000E72D /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,7 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0FAEE9208668760000E72D /* ViewController.swift in Sources */,
+				EA0FAEE9208668760000E72D /* TableViewController.swift in Sources */,
 				EA0FAEEF208668760000E72D /* SiteBlocker.xcdatamodeld in Sources */,
 				EA0FAEE7208668760000E72D /* AppDelegate.swift in Sources */,
 			);
@@ -281,6 +374,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA0FAF172086793B0000E72D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0FAF202086793B0000E72D /* ContentBlockerRequestHandler.swift in Sources */,
+				EA7666FF208E7F17006DBB61 /* SiteBlocker.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +395,11 @@
 			isa = PBXTargetDependency;
 			target = EA0FAEE2208668760000E72D /* SiteBlocker */;
 			targetProxy = EA0FAF06208668780000E72D /* PBXContainerItemProxy */;
+		};
+		EA0FAF232086793B0000E72D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA0FAF1A2086793B0000E72D /* Blocker */;
+			targetProxy = EA0FAF222086793B0000E72D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -433,7 +540,10 @@
 		EA0FAF0F208668780000E72D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = SiteBlocker/SiteBlocker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J4NK4HMU2T;
 				INFOPLIST_FILE = SiteBlocker/Info.plist;
@@ -451,7 +561,10 @@
 		EA0FAF10208668780000E72D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = SiteBlocker/SiteBlocker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J4NK4HMU2T;
 				INFOPLIST_FILE = SiteBlocker/Info.plist;
@@ -548,6 +661,48 @@
 			};
 			name = Release;
 		};
+		EA0FAF262086793B0000E72D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Blocker/Blocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4NK4HMU2T;
+				INFOPLIST_FILE = Blocker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cadams.SiteBlocker.Blocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA0FAF272086793B0000E72D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Blocker/Blocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4NK4HMU2T;
+				INFOPLIST_FILE = Blocker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cadams.SiteBlocker.Blocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,6 +738,15 @@
 			buildConfigurations = (
 				EA0FAF15208668780000E72D /* Debug */,
 				EA0FAF16208668780000E72D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA0FAF252086793B0000E72D /* Build configuration list for PBXNativeTarget "Blocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0FAF262086793B0000E72D /* Debug */,
+				EA0FAF272086793B0000E72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
