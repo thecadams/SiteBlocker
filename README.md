@@ -11,7 +11,7 @@ For most things I care about being up-to-date about, I've found ways to get news
 I badly needed to ditch my reddit habit too, because it was eating up hours each day.
 
 - [Daring Fireball](https://daringfireball.net/)
-- [MacRumors](https://macrumors.com/
+- [MacRumors](https://macrumors.com/)
 - [WTF Just Happened Today?](https://wtfjht.com/)
 - [Reddit](https://reddit.com/)
 
@@ -40,7 +40,7 @@ A couple of fascinating observations have occurred as a result of this experimen
 
 # Usage
 
-Enter regexes of the sites you want to block and it will install a Safari content blocker for you.
+Enter regexes of the sites you want to block and it will install a Safari content blocker for you. **Make sure to enable the content blocker in Settings -> Safari, or it won't work.**
 
 # What it will do
 
