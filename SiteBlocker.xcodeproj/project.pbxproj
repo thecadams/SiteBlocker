@@ -19,6 +19,7 @@
 		EA0FAF202086793B0000E72D /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAF1F2086793B0000E72D /* ContentBlockerRequestHandler.swift */; };
 		EA0FAF242086793B0000E72D /* Blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA0FAF1B2086793B0000E72D /* Blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EA7666FF208E7F17006DBB61 /* SiteBlocker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAEED208668760000E72D /* SiteBlocker.xcdatamodeld */; };
+		EAD4756E2096A69300F651A0 /* FirstLaunchURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAD4756D2096A69300F651A0 /* FirstLaunchURLs.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		EA0FAF212086793B0000E72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA7666FE208E720C006DBB61 /* SiteBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiteBlocker.entitlements; sourceTree = "<group>"; };
 		EA766700208E8399006DBB61 /* Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blocker.entitlements; sourceTree = "<group>"; };
+		EAD4756D2096A69300F651A0 /* FirstLaunchURLs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FirstLaunchURLs.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				EA0FAEF2208668780000E72D /* LaunchScreen.storyboard */,
 				EA0FAEF5208668780000E72D /* Info.plist */,
 				EA0FAEED208668760000E72D /* SiteBlocker.xcdatamodeld */,
+				EAD4756D2096A69300F651A0 /* FirstLaunchURLs.plist */,
 			);
 			path = SiteBlocker;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD4756E2096A69300F651A0 /* FirstLaunchURLs.plist in Resources */,
 				EA0FAEF4208668780000E72D /* LaunchScreen.storyboard in Resources */,
 				EA0FAEF1208668780000E72D /* Assets.xcassets in Resources */,
 				EA0FAEEC208668760000E72D /* Main.storyboard in Resources */,

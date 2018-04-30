@@ -124,14 +124,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - First launch
 
-    let firstLaunchURLs = [
-        "^https?://(www.)?daringfireball.net/",
-        "^https?://(www.)?macrumors.com/",
-        "^https?://(www.)?reddit.com/",
-        "^https?://(www.)?wtfjht.com/",
-        "^https?://(www.)?whatthefuckjusthappenedtoday.com/"
-    ]
-
     var isFirstLaunch: Bool = {
         let userDefaults = UserDefaults.standard
         let wasLaunchedBefore = userDefaults.bool(forKey: "SiteBlocker.WasLaunchedBefore")
@@ -143,17 +135,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func firstLaunchInit() {
-        let context = persistentContainer.viewContext
-        let _ = firstLaunchURLs.map {
-            let entry = Entry(context: context)
-            entry.url = $0
-            entry.enabled = true
-        }
-        do {
-            try context.save()
-        } catch {
-            let nserror = error as NSError
-            fatalError("Unresolved error saving initial urls \(nserror), \(nserror.userInfo)")
+        if let url = Bundle.main.url(forResource: "FirstLaunchURLs", withExtension: "plist") {
+            let context = persistentContainer.viewContext
+            do {
+                let data = try Data(contentsOf: url)
+                let plistData = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [String:Any]
+                let firstLaunchURLs = plistData["FirstLaunchURLs"] as! [String]
+                let _ = firstLaunchURLs.map {
+                    let entry = Entry(context: context)
+                    entry.url = $0
+                    entry.enabled = true
+                }
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error configuring initial URLs \(nserror), \(nserror.userInfo)")
+            }
         }
     }
 }

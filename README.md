@@ -6,23 +6,16 @@ SiteBlocker is a very simple little app designed to let you block sites from you
 
 I (as well as many other people I'm sure) have an unhealthy obsession with getting out my phone to do an "Internet loop". This is referring to a set of websites one goes to during any period of downtime, such as when waiting in line. It seems likely that most people have an internet loop - check Facebook, check emails, check cat videos, check Instagram... then forget you already checked Facebook and start the loop again until you remember what you were actually trying to do in the first place. Big time waster.
 
-For most things I care about being up-to-date about, I've found ways to get news without needing to constantly check certain sites. So the only sites left are centred around Apple (who doesn't love tech news!) and Trump (because the level of crazy is hard to believe).
+For most things I care about being up-to-date about, I've found ways to get news without needing to constantly check certain sites. I ditched Facebook news feed a while ago, for example; and now only get updates from the people I catch up with online or in person - far less FOMO that way. Now only a couple of news sites are left. I badly needed to ditch my reddit habit as well; it was eating up hours each day.
 
-I badly needed to ditch my reddit habit too, because it was eating up hours each day.
+This app is in service of a broader experiment to eliminate my entire Internet loop, replacing a polling-based approach ("check this site, check that site") with an automatic push - an email into my inbox.
 
-- [Daring Fireball](https://daringfireball.net/)
-- [MacRumors](https://macrumors.com/)
-- [WTF Just Happened Today?](https://wtfjht.com/)
-- [Reddit](https://reddit.com/)
-
-This app is in service of a broader experiment to eliminate my entire Internet loop, replacing a polling-based approach ("check this site, check that site") with an automatic push.
-
-For all the sites above except reddit, I block them from myself in a few ways:
+For all the sites to be blocked, I used a variety of techniques:
 
 - iOS: this app
 - PC/Mac: hosts file entries: eg. `127.0.0.1 reddit.com` and `127.0.0.1 www.reddit.com`
 
-Then, for each site that is blocked, I arrange to have a daily digest of each site's RSS feed sent to my inbox using [this IFTTT rule](https://ifttt.com/applets/77234314d-turn-rss-feed-into-daily-digest). That way I can read the email whenever I want, or file it to read at some later time, such as on the weekend.
+Then, for each site that is blocked, I arrange to have a daily digest of each site's RSS feed sent to my inbox using [this IFTTT rule](https://ifttt.com/applets/77234314d-turn-rss-feed-into-daily-digest). That way I can read the email, or file it to read at some later time, such as on the weekend.
 
 # So what were the results?
 
@@ -40,7 +33,13 @@ A couple of fascinating observations have occurred as a result of this experimen
 
 # Usage
 
-Enter regexes of the sites you want to block and it will install a Safari content blocker for you. **Make sure to enable the content blocker in Settings -> Safari, or it won't work.**
+1. Create a plist file called `FirstLaunchURLs.plist` in the root of the `SiteBlocker` directory. I have my list of URLs to start with that will appear in the app for you on first launch.
+
+2. In `FirstLaunchURLs.plist`, create a new entry of type `Array`. Call it `FirstLaunchURLs`. Add as many URLs as you wish.
+
+3. Enter regexes of the sites you want to block and it will install a Safari content blocker for you.
+
+**Make sure to enable the content blocker in Settings -> Safari, or it won't work.**
 
 # What it will do
 
